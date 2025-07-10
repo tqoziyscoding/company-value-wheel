@@ -1,0 +1,610 @@
+
+
+
+html,
+body {
+  overflow-x: hidden;
+   font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+.wheel {
+  padding: 3rem 20px 5rem;
+    position: relative;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheelMainContant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+
+.wheelContainer {
+  width: 100%;
+  padding-top: 0px;
+  transition: all 0.3s ease;
+}
+.wheelContainer:hover {
+ 
+}
+
+
+.wheelContainer:hover .wheelBlock::after {
+  font-size: 0px;
+}
+
+
+.wheelBlock {
+  width: 200px;
+  height: 350px;
+  background: transparent;
+  margin-top: 10px !important;
+  margin: 0 auto;
+  position: relative;
+  background: rgb(255, 255, 255);
+ transition: all 0.3s ease; 
+}
+
+
+
+.wheelBlock::after {
+  content: "Own Power";
+  width: 132px;
+  height: 132px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 19%, rgba(227, 225, 225, 1) 84%);
+  overflow: hidden;
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 100%;
+  z-index: 2;
+  border: 8px solid rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+  z-index: 999;
+  color: #696969;
+  transition: all 0.4s ease;
+  background-size: 200% auto;
+  animation: wheelBlockAnimation 6s linear infinite;
+
+}
+
+@keyframes wheelBlockAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.wheelsPart {
+
+  position: relative;
+}
+
+.wheelsPartInnerBlock,
+.wheelsPart,
+.contentContainer1 {
+  transition: all 0.3s ease;
+}
+
+.wheelsPart .contentContainer {
+  visibility: hidden;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+  transition: all 0s ease;
+}
+
+.wheelsPart:hover .wheelsPartInnerBlock01 {
+  transform: rotate(60deg) scaleX(1.4) scaleY(1.05);
+  z-index: 99;
+  border-radius: 40%;
+}
+
+.wheelsPart:hover .wheelsPartInnerBlock02 {
+  transform: rotate(120deg) scaleX(1.4) scaleY(1.05);
+  z-index: 99;
+  border-radius: 40%;
+}
+
+.wheelsPart:hover .wheelsPartInnerBlock03 {
+  transform: rotate(180deg) scaleX(1.4) scaleY(1.05);
+  z-index: 99;
+  border-radius: 40%;
+}
+
+.wheelsPart:hover .wheelsPartInnerBlock04 {
+  transform: rotate(240deg) scaleX(1.4) scaleY(1.05);
+  z-index: 99;
+  border-radius: 40%;
+}
+
+.wheelsPart:hover .wheelsPartInnerBlock05 {
+  transform: rotate(300deg) scaleX(1.4) scaleY(1.05);
+  z-index: 99;
+  border-radius: 40%;
+}
+
+.wheelsPart:hover .wheelsPartInnerBlock06 {
+  transform: rotate(360deg) scaleX(1.4) scaleY(1.05);
+  z-index: 99;
+  border-radius: 40%;
+}
+
+
+.wheelsPart:hover .wheelsPartInnerBlock .wheelPartBorder {
+  visibility: hidden;
+}
+
+.wheelsPart:hover .contentContainer {
+  visibility: visible;
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+.wheelBlock:hover::before .color01 {
+  background: black;
+}
+
+.wheelBlock:before {
+  content: "";
+  width: 418px;
+  height: 418px;
+  overflow: hidden;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 100%;
+  border: 32px solid #ffffff;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.wheelsPartInnerBlock {
+  clip-path: polygon(50% 50%, 100% 100%, 0 100%);
+  width: 200px;
+  height: 350px;
+  position: absolute;
+  -webkit-transform-origin: 49% 49%;
+  transform-origin: 50% 48%;
+  z-index: 1;
+
+  background: linear-gradient(90deg, #00a4bd, #00bda5);
+ 
+  cursor: pointer;
+}
+
+.wheelsPartInnerBlock01 {
+  transform: rotate(60deg) scaleX(1) scaleY(1);
+
+}
+.wheelsPartInnerBlock02 {
+  transform: rotate(120deg) scaleX(1) scaleY(1);
+
+}
+.wheelsPartInnerBlock03 {
+  transform: rotate(180deg);
+
+}
+.wheelsPartInnerBlock04 {
+  transform: rotate(240deg);
+
+}
+.wheelsPartInnerBlock05 {
+  transform: rotate(300deg);
+
+}
+.wheelsPartInnerBlock06 {
+  transform: rotate(360deg);
+
+}
+.animateddDiv {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgb(16, 172, 131);
+}
+
+.wheelPartBorder {
+  position: absolute;
+  top: 65%;
+  overflow: hidden;
+  z-index: 2;
+  transform: rotate(180deg);
+}
+
+.wheelPartBorderBlock {
+  position: relative;
+  cursor: crosshair;
+  margin-top: 0px;
+  margin-bottom: -120px;
+  z-index: 1;
+  overflow: visible;
+  transition: width 0.3s, height 0.3s, transform 0.3s;
+  width: 149px;
+  height: 138px;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-top: 35px solid #00bda5;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 100%;
+  transform: translateX(-17%);
+  box-shadow: -11px 0px 15px -15px rgba(0, 0, 0, 0.75);
+
+}
+.wheelPartIcon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 64%;
+  left: 13%;
+  /* overflow: hidden; */
+  z-index: 99999;
+  transform: rotate(180deg);
+}
+
+.wheelPartIconBlock {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  z-index: 38;
+  overflow: visible;
+  width: 100px;
+  height: 100px;
+  transform: translateX(0%);
+}
+
+.wheelPartIconBlock img {
+  width: 55px;
+  height: 55px;
+}
+.wheelsPart h3 {
+  position: absolute;
+  z-index: 9999;
+  top: 156px;
+  font-size: 15px;
+  text-align: center;
+  left: 55px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.wheelsPart:hover h3 {
+  visibility: visible;
+  opacity: 1;
+  color: #00bda5;
+}
+
+.contentContainer {
+  position: absolute;
+  top: 100%;
+  z-index: 99999;
+  transform: rotate(0deg);
+}
+
+.contentDiv {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  z-index: 38;
+  overflow: visible;
+  width: 200px;
+
+  transform: translateX(0%);
+}
+.contentDtails{
+    text-align: center;
+}
+.contentDtails h3 {
+  padding: 0;
+  margin: 0;
+  color: #00bda5;
+}
+
+.contentDtails p {
+  margin-top: 5px;
+  opacity: 0.6;
+}
+
+.contentContainer .arrowDiv {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-right: 25px solid #00bda5;
+  border-bottom: 18px solid transparent;
+  position: absolute;
+  right: -6px;
+}
+
+.contentContainer1 {
+  left: -148%;
+  top: 252px;
+}
+
+.contentContainer .arrowDiv {
+  transform: rotate(-29deg);
+}
+
+.contentContainer1 .arrowDiv {
+  top: -3px;
+  left: 101%;
+}
+
+
+.contentContainer2 {
+  left: -140%;
+  top: 20px;
+
+}
+.contentContainer2 .arrowDiv {
+  transform: rotate(30deg);
+  right: -11px;
+  top: 22px;
+
+}
+
+.contentContainer3 {
+
+  top: -110px;
+}
+.contentContainer3 .arrowDiv {
+  transform: rotate(90deg);
+  right: 79px;
+  bottom: -42px;
+}
+.contentContainer4 {
+    left: 149%;
+    top: 34px;
+}
+
+.contentContainer4 .arrowDiv {
+  transform: rotate(151deg);
+    right: 202px;
+    bottom: -5px;
+}
+.contentContainer5 {
+     left: 138%;
+    top: 261px;;
+
+}
+.contentContainer5 .arrowDiv {
+  transform: rotate(210deg);
+  right: 182px;
+  bottom: 16px;
+}
+
+.contentContainer6 {
+  left:0%;
+  top: 388px;
+}
+
+.contentContainer6 .arrowDiv {
+  transform: rotate(270deg);
+  right: 90px;
+  bottom: 39px;
+}
+
+
+@media screen and (min-width: 793px) {
+.wheelContainer {
+  max-width: 355px;
+        margin: 0 auto;
+        border-radius: 50%;
+        padding: 20px;
+}
+}
+@media screen and (max-width: 792px) {
+  .wheelsPartInnerBlock {
+    position: relative;
+    clip-path: none;
+    transform-origin: 0% 0%;
+    width: auto;
+    transform: rotate(0deg) !important;
+    height: 190px;
+    border-radius: 10px !important;
+    z-index: 2 !important;
+  }
+
+  .wheelsPartInnerBlock:hover {
+   
+    box-shadow: 0px 0px 15px -4px rgba(83, 83, 83, 0.75);
+  }
+
+  .wheelsPart {
+    flex: 33.33%;
+    height: 190px;
+
+  }
+  .wheelsPart .contentContainer {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: none;
+  }
+
+  .wheelBlock {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: 10px;
+    margin-top: 20px !important;
+  }
+.wheelContainer:hover {
+  padding-top: 0;
+}
+
+  .wheelBlock::after {
+    display: none;
+  }
+
+  .wheelBlock::before {
+    display: none;
+  }
+
+  .wheelsPart:hover .color01,
+  .wheelsPart .color01 {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+    z-index: 99;
+    border-radius: 0%;
+  }
+
+  .wheelsPart:hover .color02,
+  .wheelsPart .color02 {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+    z-index: 99;
+    border-radius: 0%;
+  }
+
+  .wheelsPart:hover .color03,
+  .wheelsPart .color03 {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+    z-index: 99;
+    border-radius: 0%;
+  }
+
+  .wheelsPart:hover .color04,
+  .wheelsPart .color04 {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+    z-index: 99;
+    border-radius: 0%;
+  }
+
+  .wheelsPart:hover .color05,
+  .wheelsPart .color05 {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+    z-index: 99;
+    border-radius: 0%;
+  }
+
+  .wheelsPart:hover .color06,
+  .wheelsPart .color06 {
+    transform: rotate(0deg) scaleX(1) scaleY(1);
+    z-index: 99;
+    border-radius: 0%;
+  }
+
+  .contentContainer .arrowDiv {
+    display: none !important;
+  }
+
+  .wheelPartBorder {
+    display: none;
+  }
+
+  .wheelPartIcon {
+    position: relative;
+    width: 55px;
+    height: 55px;
+    top: 15px;
+    left: 18px;
+    /* overflow: hidden; */
+    z-index: 99999;
+    transform: rotate(0deg);
+  }
+
+  .wheelPartIconBlock {
+    width: 55px;
+    height: 55px;
+  }
+
+  .wheelsPart h3 {
+    pointer-events: none;
+    position: absolute;
+    z-index: 9;
+    top: 80px;
+    left: 18px !important;
+    font-size: 16px;
+    color: #fff !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .wheelsPart:hover h3 {
+    visibility: visible !important;
+  }
+
+  .wheelsPart .contentContainer {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+  }
+
+  .wheelsPart .contentContainer {
+    left: auto !important;
+    top: 95px !important;
+    bottom: auto;
+    padding: 10px 17px;
+  }
+
+  .contentDiv {
+    width: auto;
+  }
+
+  .wheelsPart .contentContainer {
+    width: auto !important;
+  }
+.contentDtails {
+    text-align: left;
+}
+  .contentDtails p {
+    margin-top: 5px;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .wheelPartIconBlock img {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+@media screen and (max-width: 492px) {
+  .wheelsPart {
+    flex: 40%;
+  }
+}
+
